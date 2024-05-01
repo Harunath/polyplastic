@@ -3,6 +3,7 @@ import { useRecoilState } from "recoil";
 import { navState } from "../../store/atoms";
 import logo from "../../assets/polyplast-logo.webp";
 import { useState } from "react";
+import AboutUs from "./AboutUs";
 
 const Navbar = () => {
 	const [navOpen, setNavOpen] = useRecoilState(navState);
@@ -49,7 +50,7 @@ const Navbar = () => {
 							<path d="M7 10l5 5 5-5z" />
 						</svg>
 					</span>
-					{openAboutUs ? <AboutUsDropdown /> : ""}
+					{openAboutUs ? <AboutUs /> : ""}
 				</div>
 				<div>
 					<button>
@@ -78,18 +79,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-function AboutUsDropdown() {
-	return (
-		<div className=" absolute w-20 md:w-40 left-0 top-full rounded-t-xl bg-white pt-2 px-4">
-			<div className="w-full">
-				<div className="w-full">
-					<p>History</p>
-				</div>
-				<div className="w-full">
-					<p>The Group</p>
-				</div>
-			</div>
-		</div>
-	);
-}

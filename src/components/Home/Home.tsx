@@ -1,7 +1,9 @@
+import Carousel from "./Carousel";
+
 function Home() {
 	return (
 		<div>
-			Home
+			<Carousel />
 			<div>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ab cumque
 				aliquam voluptatibus. Eveniet voluptate ratione excepturi ea suscipit
