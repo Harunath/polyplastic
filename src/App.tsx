@@ -4,7 +4,7 @@ import Home from "./components/Home/Home";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Products from "./components/Products/Products";
 import Location from "./components/Location";
-import ContactUs from "./components/ContactUs";
+import ContactUs from "./ContactUs/ContactUs";
 import Technology from "./components/Technology";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
