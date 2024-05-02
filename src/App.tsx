@@ -8,6 +8,8 @@ import ContactUs from "./components/ContactUs";
 import Technology from "./components/Technology";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import "@splidejs/react-splide/css/core";
+
 function App() {
 	return (
 		<div className=" h-screen">

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"; // If using React Router
 import { useRecoilState } from "recoil";
 import { navState } from "../../store/atoms";
-import logo from "../../assets/polyplast-logo.webp";
+import logo from "../../assets/Logo.jpeg";
 import { useState } from "react";
 import AboutUs from "./AboutUs";
 
