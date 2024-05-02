@@ -1,4 +1,6 @@
 import Carousel from "./Carousel";
+import Cater from "./Cater";
+import Designs from "./Designs";
 import MiniProductsAndServices from "./MiniProductsAndServices";
 
 function Home() {
@@ -6,6 +8,8 @@ function Home() {
 		<div>
 			<Carousel />
 			<MiniProductsAndServices />
+			<Designs/>
+			<Cater/>
 		</div>
 	);
 }
