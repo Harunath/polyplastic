@@ -1,170 +1,155 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { PUBLIC_KEY, SERVICE_ID, ENQUIRY_TEMPLATE_ID } from "../store/atoms";
 import emailjs from "@emailjs/browser";
 
 const EnquiryForm = () => {
-	const [formData, setFormData] = useState({
-		companyName: "Not mentioned",
-		contactPerson: "",
-		mobileNo: "",
-		email: "",
-		address: "Not mentioned",
-		message: "",
-	});
+  const [formData, setFormData] = useState({
+    companyName: "",
+    contactPerson: "",
+    mobileNo: "",
+    email: "",
+    address: "",
+    message: "",
+  });
 
-	// private keys for sending email
-	const service_id: string = useRecoilValue(SERVICE_ID);
-	const template_id: string = useRecoilValue(ENQUIRY_TEMPLATE_ID);
-	const public_key: string = useRecoilValue(PUBLIC_KEY);
+  const service_id = useRecoilValue(SERVICE_ID);
+  const template_id = useRecoilValue(ENQUIRY_TEMPLATE_ID);
+  const public_key = useRecoilValue(PUBLIC_KEY);
 
-	//handling changes in form
-	const handleChange = (e: { target: { name: any; value: any } }) => {
-		setFormData({ ...formData, [e.target.name]: e.target.value });
-	};
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-	// sending mail on submit
-	const sendEmail = async (e: { preventDefault: () => void }) => {
-		e.preventDefault();
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-		try {
-			await emailjs.send(service_id, template_id, formData, {
-				publicKey: public_key,
-			});
-			console.log("SUCCESS!");
-		} catch (error) {
-			console.log("FAILED...", error);
-		}
-	};
+    try {
+      await emailjs.send(service_id, template_id, formData, {
+        publicKey: public_key,
+      });
+      console.log("SUCCESS!");
+    } catch (error) {
+      console.log("FAILED...", error);
+    }
+  };
 
-	const handleReset = () => {
-		setFormData({
-			companyName: "Not mentioned",
-			contactPerson: "",
-			mobileNo: "",
-			email: "",
-			address: "Not mentioned",
-			message: "",
-		});
-	};
+  const handleReset = () => {
+    setFormData({
+      companyName: "",
+      contactPerson: "",
+      mobileNo: "",
+      email: "",
+      address: "",
+      message: "",
+    });
+  };
 
-	return (
-		<form className="max-w-md mx-auto p-4 bg-white rounded-md shadow-md">
-			<div className="mb-4">
-				<div className="flex mb-2">
-					<div className="w-1/2 mr-2">
-						<label
-							htmlFor="companyName"
-							className="block text-sm font-medium text-gray-700">
-							Company Name
-						</label>
-						<input
-							type="text"
-							id="companyName"
-							name="companyName"
-							className="w-full mt-1 border-gray-300 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-							value={formData.companyName}
-							onChange={handleChange}
-						/>
-					</div>
-					<div className="w-1/2 ml-2">
-						<label
-							htmlFor="contactPerson"
-							className="block text-sm font-medium text-gray-700">
-							Contact Person <span className="text-red-500">*</span>
-						</label>
-						<input
-							type="text"
-							id="contactPerson"
-							name="contactPerson"
-							className="w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-							value={formData.contactPerson}
-							onChange={handleChange}
-							required
-						/>
-					</div>
-				</div>
-				<div className="flex mb-2">
-					<div className="w-1/2 mr-2">
-						<label
-							htmlFor="mobileNo"
-							className="block text-sm font-medium text-gray-700">
-							Mobile No <span className="text-red-500">*</span>
-						</label>
-						<input
-							type="text"
-							id="mobileNo"
-							name="mobileNo"
-							className="w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-							value={formData.mobileNo}
-							onChange={handleChange}
-							required
-						/>
-					</div>
-					<div className="w-1/2 ml-2">
-						<label
-							htmlFor="email"
-							className="block text-sm font-medium text-gray-700">
-							Email <span className="text-red-500">*</span>
-						</label>
-						<input
-							type="email"
-							id="email"
-							name="email"
-							className="w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-							value={formData.email}
-							onChange={handleChange}
-							required
-						/>
-					</div>
-				</div>
-				<div className="mb-2">
-					<label
-						htmlFor="address"
-						className="block text-sm font-medium text-gray-700">
-						Address
-					</label>
-					<input
-						type="text"
-						id="address"
-						name="address"
-						className="w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-						value={formData.address}
-						onChange={handleChange}
-					/>
-				</div>
-				<div className="mb-4">
-					<label
-						htmlFor="message"
-						className="block text-sm font-medium text-gray-700">
-						Message <span className="text-red-500">*</span>
-					</label>
-					<textarea
-						id="message"
-						name="message"
-						rows={4}
-						className="w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-						value={formData.message}
-						onChange={handleChange}
-						required></textarea>
-				</div>
-				<div className="flex justify-between">
-					<button
-						type="submit"
-						className="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-600 transition-colors"
-						onClick={sendEmail}>
-						Submit
-					</button>
-					<button
-						type="button"
-						onClick={handleReset}
-						className="bg-gray-300 text-gray-700 rounded-md px-4 py-2 font-semibold hover:bg-gray-400 transition-colors">
-						Reset
-					</button>
-				</div>
-			</div>
-		</form>
-	);
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+      <div>
+        <img
+          src="https://www.polyplast.co.in/assets/img/contact-us-img.webp"
+          alt="Enquiry Form"
+          className="w-5/6 m-auto"
+        />
+      </div>
+      <form className="max-w-2xl ">
+        <p className="text-3xl font-light mb-6">Enquiry Form</p>
+        <div className=" space-y-5">
+         <div className="flex gap-x-4 ">
+         <div className="w-1/2">
+            <input
+              type="text"
+              placeholder="Name of the Company"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              value={formData.companyName}
+              onChange={handleChange}
+              name="companyName"
+            />
+          </div>
+          <div className="flex flex-1">
+            <input
+              type="text"
+              placeholder="Name of Contact Person"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              value={formData.contactPerson}
+              onChange={handleChange}
+              name="contactPerson"
+            />
+          </div>
+         </div>
+         <div className="flex gap-x-4 ">
+          <div className="w-1/2">
+            <input
+              type="text"
+              placeholder="Mobile Number"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              value={formData.mobileNo}
+              onChange={handleChange}
+              name="mobileNo"
+            />
+          </div>
+          <div className="flex flex-1">
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              value={formData.email}
+              onChange={handleChange}
+              name="email"
+            />
+          </div>
+          </div>
+          <div>
+            <textarea
+              placeholder="Address"
+              id="address"
+              name="address"
+              rows={4}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 resize-y"
+              value={formData.address}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <div>
+            <textarea
+              placeholder="Message"
+              id="message"
+              name="message"
+              rows={4}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 resize-y"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+        </div>
+        <div className="flex justify-start mt-8">
+          <button
+            type="submit"
+            className="bg-gray-500 hover:bg-white text-white hover:text-gray-500 py-2 px-4 rounded-md shadow-md transition duration-300"
+            onClick={sendEmail}
+          >
+            Submit
+          </button>
+          <button
+            type="reset"
+            className="bg-gray-500 hover:bg-white text-white hover:text-gray-500 py-2 px-4 ml-4 rounded-md shadow-md transition duration-300"
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  );
 };
 
 export default EnquiryForm;
+
+
+
+
+
+
+
