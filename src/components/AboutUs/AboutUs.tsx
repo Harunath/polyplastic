@@ -1,10 +1,13 @@
+import WhyUs from "./WhyUs/WhyUs";
 import WhoWeAre from "./whoWeAre/WhoWeAre";
 
 function AboutUs() {
-	return 
+	return (
 	<div>
 		<WhoWeAre/>
-	</div>;
+		<WhyUs/>
+	</div>
+	);
 }
 
 export default AboutUs;

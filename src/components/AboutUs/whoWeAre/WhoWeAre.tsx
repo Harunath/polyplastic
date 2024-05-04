@@ -1,10 +1,13 @@
+import HeroSection from "./HeroSection"
+import Intro from "./Intro"
 
 
 
 function WhoWeAre() {
   return (
     <div>
-       this is who we are
+       <HeroSection/>
+       <Intro/>
     </div>
   )
 }
