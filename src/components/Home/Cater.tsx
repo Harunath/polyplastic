@@ -72,9 +72,9 @@ const Cater = () => {
 	return (
 		<div className="mt-20 px-10">
 			<div className="flex justify-center">
-				<p className=" text-4xl w-fit font-light">Industry we Cater</p>
+				<p className=" text-4xl w-fit font-light mb-10">Industry we Cater</p>
 			</div>
-			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 ">
+			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 my-5">
 				{items.map((item, index) => (
 					<div
 						key={index}
