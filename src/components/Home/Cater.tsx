@@ -70,20 +70,20 @@ const Cater = () => {
 	];
 
 	return (
-		<div className="mt-20">
+		<div className="mt-20 px-10">
 			<div className="flex justify-center">
-				<p className=" text-4xl w-fit">Industry we Cater</p>
+				<p className=" text-4xl w-fit font-light">Industry we Cater</p>
 			</div>
-			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 ">
 				{items.map((item, index) => (
 					<div
 						key={index}
-						className="bg-white rounded-lg shadow-lg p-4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
+						className=" flex flex-col gap-2 justify-center items-center bg-white rounded-lg shadow-lg p-4 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
 						{/* Enclose the image in a circle */}
 						<img
 							src={item.imgSrc}
 							alt={item.text}
-							className=" w-4/6 hover:w-5/6 transition-all duration-500 h-auto rounded-full gap-10 m-auto"
+							className=" w-4/6 hover:w-5/6 transition-all duration-700 h-auto rounded-full border-8 border-gray-200 p-2 m-auto "
 						/>
 						<p className="text-center">{item.text}</p>
 					</div>
