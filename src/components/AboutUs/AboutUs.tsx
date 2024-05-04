@@ -1,5 +1,10 @@
+import WhoWeAre from "./whoWeAre/WhoWeAre";
+
 function AboutUs() {
-	return <div>About Us</div>;
+	return 
+	<div>
+		<WhoWeAre/>
+	</div>;
 }
 
 export default AboutUs;

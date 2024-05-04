@@ -92,7 +92,7 @@ const Footer = () => {
                   <img
                     src="https://vectorified.com/images/location-icon-transparent-background-1.png"
                     alt="Location Icon"
-                    className="w-6 h-6 mr-2"
+                    className="w-6 h-2 mr-2"
                     style={{ height: "24px" }} // Adjust height here
                   />
                   <span>Marketing and Administrative office:</span>

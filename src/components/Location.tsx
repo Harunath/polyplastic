@@ -1,5 +1,12 @@
+
+import HeroSection from './Location/Herosection'
+
 function Location() {
-	return <div>Location</div>;
+  return (
+    <div>
+        <HeroSection/>
+    </div>
+  )
 }
 
-export default Location;
+export default Location

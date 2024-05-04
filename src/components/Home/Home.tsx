@@ -1,3 +1,6 @@
+
+
+
 import Carousel from "./Carousel";
 import Cater from "./Cater";
 import Designs from "./Designs";
@@ -10,6 +13,8 @@ function Home() {
 			<MiniProductsAndServices />
 			<Designs/>
 			<Cater/>
+			
+			
 		</div>
 	);
 }

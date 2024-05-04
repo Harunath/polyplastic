@@ -17,7 +17,7 @@ function App() {
 			<div className="overflow-y-scroll h-[calc(100%-96px)]">
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/aboutus" element={<AboutUs />} />
+					<Route path="/aboutus" element={<AboutUs/>} />
 					<Route path="/products" element={<Products />} />
 					<Route path="/location" element={<Location />} />
 					<Route path="contactus" element={<ContactUs />} />

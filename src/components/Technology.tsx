@@ -1,5 +1,12 @@
+
+import HeroSection from './Technology/HeroSection'
+
 function Technology() {
-	return <div>Technology</div>;
+  return (
+    <div>
+        <HeroSection/>
+    </div>
+  )
 }
 
-export default Technology;
+export default Technology

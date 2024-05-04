@@ -1,5 +1,12 @@
+import HeroBanner from "./Projects/HeroBanner"
+
+
 function Projects() {
-	return <div>Projects</div>;
+  return (
+    <div>
+        <HeroBanner/>
+    </div>
+  )
 }
 
-export default Projects;
+export default Projects
