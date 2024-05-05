@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import AboutUsDropdown from "./AboutUsDropdown";
-function AboutUs() {
-	const [openAboutUs, setOpenAboutUs] = useState(false);
+import ProductsDropdown from "./ProductsDropdowm";
+
+function Products() {
+	const [openProducts, setOpenProducts] = useState(false);
 
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -9,7 +10,7 @@ function AboutUs() {
 		// Function to close dropdown when clicking outside of it
 		const handleClickOutside = (event: { target: any }) => {
 			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-				setOpenAboutUs(false);
+				setOpenProducts(false);
 			}
 		};
 
@@ -20,15 +21,16 @@ function AboutUs() {
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
-	}, [dropdownRef, setOpenAboutUs]);
+	}, [dropdownRef, setOpenProducts]);
+
 	return (
 		<div ref={dropdownRef} className="relative flex items-center h-full">
 			<div
-				onClick={() => setOpenAboutUs(!openAboutUs)}
+				onClick={() => setOpenProducts(!openProducts)}
 				className="text-black text-md hover:text-blue-500 transition-color duration-500">
-				About Us
+				Products
 			</div>
-			<span onClick={() => setOpenAboutUs(!openAboutUs)}>
+			<span onClick={() => setOpenProducts(!openProducts)}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
@@ -37,9 +39,9 @@ function AboutUs() {
 					<path d="M7 10l5 5 5-5z" />
 				</svg>
 			</span>
-			{openAboutUs ? <AboutUsDropdown /> : ""}
+			{openProducts ? <ProductsDropdown /> : ""}
 		</div>
 	);
 }
 
-export default AboutUs;
+export default Products;

@@ -4,13 +4,12 @@ import { navState } from "../../store/atoms";
 import logo from "../../assets/Logo.jpeg";
 import { useState } from "react";
 import AboutUs from "./AboutUs";
-import ProductsDropdown from "./ProductsDropdowm";
+import Products from "./Products";
 
 const Navbar = () => {
 	const [navOpen, setNavOpen] = useRecoilState(navState);
-	const [openAboutUs, setOpenAboutUs] = useState(false);
-	const [openProducts, setOpenProducts] = useState(false);
 	const [svgHover, setSvgHover] = useState("black");
+
 	const toggleNav = () => {
 		setNavOpen(!navOpen);
 	};
@@ -62,40 +61,8 @@ const Navbar = () => {
 						<polyline points="9 22 9 12 15 12 15 22" />
 					</svg>
 				</Link>
-				<div className="relative flex items-center h-full">
-					<div
-						onClick={() => setOpenAboutUs(!openAboutUs)}
-						className="text-black text-md hover:text-blue-500 transition-color duration-500">
-						About Us
-					</div>
-					<span onClick={() => setOpenAboutUs(!openAboutUs)}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							width="24"
-							height="24">
-							<path d="M7 10l5 5 5-5z" />
-						</svg>
-					</span>
-					{openAboutUs ? <AboutUs /> : ""}
-				</div>
-				<div className="relative flex items-center h-full">
-					<div
-						onClick={() => setOpenProducts(!openProducts)}
-						className="text-black text-md hover:text-blue-500 transition-color duration-500">
-						Products
-					</div>
-					<span onClick={() => setOpenProducts(!openProducts)}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							width="24"
-							height="24">
-							<path d="M7 10l5 5 5-5z" />
-						</svg>
-					</span>
-					{openProducts ? <ProductsDropdown /> : ""}
-				</div>
+				<AboutUs />
+				<Products />
 				<div>
 					<button>
 						<Link
