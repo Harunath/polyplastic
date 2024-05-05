@@ -10,6 +10,7 @@ const Navbar = () => {
 	const [navOpen, setNavOpen] = useRecoilState(navState);
 	const [openAboutUs, setOpenAboutUs] = useState(false);
 	const [openProducts, setOpenProducts] = useState(false);
+	const [svgHover, setSvgHover] = useState("black");
 	const toggleNav = () => {
 		setNavOpen(!navOpen);
 	};
@@ -25,14 +26,18 @@ const Navbar = () => {
 			<div className="bg-[#4e4e50] flex justify-end items-center gap-x-4 w-full px-4 pr-20 py-1 h-12">
 				<div>
 					<button>
-						<Link className="text-white text-md" to="/location">
+						<Link
+							className="text-white text-md hover:text-blue-500 transition-color duration-500"
+							to="/location">
 							Location
 						</Link>
 					</button>
 				</div>
 				<div>
 					<button>
-						<Link className="text-white text-md" to="/contactus">
+						<Link
+							className="text-white text-md hover:text-blue-500 transition-color duration-500"
+							to="/contactus">
 							Contact us
 						</Link>
 					</button>
@@ -46,11 +51,13 @@ const Navbar = () => {
 						height="24"
 						viewBox="0 0 24 24"
 						fill="none"
-						stroke="black"
+						stroke={svgHover}
 						strokeWidth="2"
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						className="w-5 h-5">
+						className="w-5 h-5 hover:text-blue-500"
+						onMouseOver={() => setSvgHover("rgb(59 130 246)")}
+						onMouseLeave={() => setSvgHover("#000")}>
 						<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
 						<polyline points="9 22 9 12 15 12 15 22" />
 					</svg>
@@ -58,7 +65,7 @@ const Navbar = () => {
 				<div className="relative flex items-center h-full">
 					<div
 						onClick={() => setOpenAboutUs(!openAboutUs)}
-						className="text-black text-md">
+						className="text-black text-md hover:text-blue-500 transition-color duration-500">
 						About Us
 					</div>
 					<span onClick={() => setOpenAboutUs(!openAboutUs)}>
@@ -75,7 +82,7 @@ const Navbar = () => {
 				<div className="relative flex items-center h-full">
 					<div
 						onClick={() => setOpenProducts(!openProducts)}
-						className="text-black text-md">
+						className="text-black text-md hover:text-blue-500 transition-color duration-500">
 						Products
 					</div>
 					<span onClick={() => setOpenProducts(!openProducts)}>
@@ -91,14 +98,18 @@ const Navbar = () => {
 				</div>
 				<div>
 					<button>
-						<Link className="text-black text-md" to="/material">
+						<Link
+							className="text-black text-md hover:text-blue-500 transition-color duration-500"
+							to="/material">
 							Material
 						</Link>
 					</button>
 				</div>
 				<div>
 					<button>
-						<Link className="text-black text-md" to="/projects">
+						<Link
+							className="text-black text-md hover:text-blue-500 transition-color duration-500"
+							to="/projects">
 							Projects
 						</Link>
 					</button>

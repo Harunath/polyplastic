@@ -6,11 +6,10 @@ import ContactDetails from "./ContactDetails";
 function ContactUs() {
 	return (
 		<div>
-			<HeroSection/>
-			<ContactDetails/>
+			<HeroSection />
+			<ContactDetails />
 			<EnquiryForm />
 			<FeedbackFrom />
-			
 		</div>
 	);
 }
