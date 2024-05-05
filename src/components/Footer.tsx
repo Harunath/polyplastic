@@ -37,11 +37,11 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-8 relative">
       {/* Blurred background image covering the entire footer */}
       <div className="absolute inset-0">
-        <img
+        {/* <img
           src="https://tse1.mm.bing.net/th?id=OIP.uflsi3aULTPZpXb6gZT_xgHaEG&pid=Api&P=0&h=180"
           alt="Background Image 1"
           className="w-full h-2vh object-cover filter blur-sm"
-        />
+        /> */}
       </div>
       {/* Content container */}
       <div className="container mx-auto relative z-10">
