@@ -34,7 +34,7 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className="bg-gray-900 text-white py-8 relative">
+		<footer className="bg-gray-600 text-white py-8 relative">
 			{/* Blurred background image covering the entire footer */}
 			{/* <div className="absolute inset-0">
         <img
