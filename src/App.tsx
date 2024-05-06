@@ -25,11 +25,19 @@ function App() {
 					<Route path="/aboutus" element={<AboutUs />} />
 					<Route path="/whoweare" element={<WhoWeAre />} />
 					<Route path="/whyus" element={<WhyUs />} />
-					<Route path="/products" element={<Products />} />
-					<Route path="/chemicalequipment" element={<ChemicalEquipment />} />
-					<Route path="/pipes&fitting" element={<PipesFitting />} />
-					<Route path="/frprod" element={<FRPROD />} />
-					<Route path="/specialproducts" element={<SpecialProducts />} />
+					<Route path="/products" element={<Products />}>
+						<Route path="*" element={<ChemicalEquipment />} />
+						<Route
+							path="/products/chemicalequipment"
+							element={<ChemicalEquipment />}
+						/>
+						<Route path="/products/pipes&fitting" element={<PipesFitting />} />
+						<Route path="/products/frprod" element={<FRPROD />} />
+						<Route
+							path="/products/specialproducts"
+							element={<SpecialProducts />}
+						/>
+					</Route>
 					<Route path="/location" element={<Location />} />
 					<Route path="contactus" element={<ContactUs />} />
 					<Route path="material" element={<Material />} />

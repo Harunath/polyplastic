@@ -1,14 +1,16 @@
-
-import HeroSection from './HeroSection'
-import Services from './Services'
+import TopBanner from "../../TopBanner";
+import Services from "./Services";
 
 function WhyUs() {
-  return (
-    <div>
-        <HeroSection/>
-        <Services/>
-    </div>
-  )
+	const image =
+		"https://computerbazzar.com/wp-content/uploads/2019/03/why_us_banner-860x269.jpg";
+	return (
+		<div>
+			{/* <HeroSection/> */}
+			<TopBanner image={image} text="WhyUs?" />
+			<Services />
+		</div>
+	);
 }
 
-export default WhyUs
+export default WhyUs;

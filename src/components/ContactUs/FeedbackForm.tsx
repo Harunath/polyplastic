@@ -8,14 +8,8 @@ import {
 } from "../../store/atoms";
 import RButton from "../RButton";
 
-interface FormData {
-	user_name: string;
-	user_email: string;
-	message: string;
-}
-
 const FeedbackForm = () => {
-	const [formData, setFormData] = useState<FormData>({
+	const [formData, setFormData] = useState({
 		user_name: "",
 		user_email: "",
 		message: "",

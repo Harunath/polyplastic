@@ -1,15 +1,16 @@
-import HeroSection from "./HeroSection"
-import Intro from "./Intro"
-
-
+import TopBanner from "../../TopBanner";
+import Intro from "./Intro";
 
 function WhoWeAre() {
-  return (
-    <div>
-       <HeroSection/>
-       <Intro/>
-    </div>
-  )
+	const image =
+		"https://cdn6.dissolve.com/p/D145_288_084/D145_288_084_1200.jpg";
+	return (
+		<div>
+			{/* <HeroSection/> */}
+			<TopBanner image={image} text="WhoWeAre?" />
+			<Intro />
+		</div>
+	);
 }
 
-export default WhoWeAre
+export default WhoWeAre;
