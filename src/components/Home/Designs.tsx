@@ -1,3 +1,5 @@
+import RButton from "../RButton";
+
 const Designs = () => {
 	return (
 		<div className="flex flex-col lg:flex-row justify-between items-center mt-20">
@@ -8,33 +10,25 @@ const Designs = () => {
 					src="https://www.polyplast.co.in/assets/img/manufacturing-s.webp?4"
 					alt="Left Image"
 				/>
-				<div className="m-auto w-1/2">
-					<h1 className="text-xl font-semibold mb-2">Manufacturing</h1>
+				<div className="my-20 px-10">
+					<p className="text-4xl font-extralight mb-2">Manufacturing</p>
 					<p className="text-gray-700 mb-4">
 						We design and manufacture composite items, selecting the best
 						product for your requirements.
 					</p>
-					<a
-						href="#"
-						className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">
-						Read More
-					</a>
+					<RButton>Read More</RButton>
 				</div>
 			</div>
 			{/* right content */}
 			<div className="flex flex-1 h-full border-l border-gray-300">
-				<div className=" px-10 my-auto">
-					<h1 className="text-xl font-semibold mb-2">Engineering</h1>
+				<div className=" px-10 my-20">
+					<p className="text-4xl font-extralight mb-2">Engineering</p>
 					<p className="text-gray-700 mb-4">
 						POLY PLAST offers optimized pipe systems design and engineering,
 						including stress and surge analysis as well as pipe support packages
 						and detailed engineering for all composites products.
 					</p>
-					<a
-						href="#"
-						className="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">
-						Read More
-					</a>
+					<RButton>Read More</RButton>
 				</div>
 				<img
 					src="https://www.polyplast.co.in/assets/img/technology-s.webp?2"

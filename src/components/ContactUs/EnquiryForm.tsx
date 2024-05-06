@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { PUBLIC_KEY, SERVICE_ID, ENQUIRY_TEMPLATE_ID } from "../../store/atoms";
 import emailjs from "@emailjs/browser";
+import RButton from "../RButton";
 
 const EnquiryForm = () => {
 	const [formData, setFormData] = useState({
@@ -122,19 +123,13 @@ const EnquiryForm = () => {
 							onChange={handleChange}></textarea>
 					</div>
 				</div>
-				<div className="flex justify-start mt-8">
-					<button
-						type="submit"
-						className="bg-gray-500 hover:bg-white text-white hover:text-gray-500 py-2 px-4 rounded-md shadow-md transition duration-300"
-						onClick={sendEmail}>
-						Submit
-					</button>
-					<button
-						type="reset"
-						className="bg-gray-500 hover:bg-white text-white hover:text-gray-500 py-2 px-4 ml-4 rounded-md shadow-md transition duration-300"
-						onClick={handleReset}>
-						Reset
-					</button>
+				<div className="flex justify-start gap-x-10 mt-8">
+					<RButton>
+						<button onClick={sendEmail}>Submit</button>
+					</RButton>
+					<RButton>
+						<button onClick={handleReset}>Reset</button>
+					</RButton>
 				</div>
 			</form>
 		</div>

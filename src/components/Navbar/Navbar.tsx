@@ -15,9 +15,8 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="shadow-2xl relative flex flex-col justify-between items-center">
+		<nav className="shadow-xl shadow-gray-400 relative flex flex-col justify-between items-center z-10">
 			<div className=" absolute bg-white flex items-center w-auto h-full left-[10%]">
-				{/* Logo */}
 				<Link to="/" className="h-full text-black text-lg font-bold">
 					<img className="h-full" src={logo} alt="Logo" />
 				</Link>

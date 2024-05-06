@@ -6,6 +6,7 @@ import {
 	FEEDBACK_TEMPLATE_ID,
 	PUBLIC_KEY,
 } from "../../store/atoms";
+import RButton from "../RButton";
 
 interface FormData {
 	user_name: string;
@@ -98,11 +99,9 @@ const FeedbackForm = () => {
 								onChange={handleChange}
 								required></textarea>
 						</div>
-						<button
-							type="submit"
-							className="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-600 transition-colors">
-							Send Email
-						</button>
+						<RButton>
+							<button type="submit">Send Email</button>
+						</RButton>
 					</form>
 				</div>
 			</div>

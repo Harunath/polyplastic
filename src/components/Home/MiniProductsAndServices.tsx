@@ -1,11 +1,13 @@
+import RButton from "../RButton";
+
 const MiniProductsAndServices = () => {
 	return (
 		<div className="flex justify-center gap-8 w-5/6 mx-auto mt-20">
-			<div className="w-3/4 ml-4">
-				<h1 className="text-4xl font-light text-center">
+			<div className="w-3/4">
+				<p className="text-4xl font-light text-center">
 					Full Range of Composite Products & Services
-				</h1>
-				<p className="text-gray-700">
+				</p>
+				<p className="text-gray-700 mt-5">
 					POLY PLAST CHEMI-PLANTS(INDIA) PVT LTD has been providing global
 					solutions to fight corrosion since 1967. With our strength of more
 					than 400 skilled labourers and 18000 Sq Meters of fabrication. We
@@ -16,13 +18,9 @@ const MiniProductsAndServices = () => {
 				<img
 					src="src/assets/MiniProductsAndServices/main.jpg"
 					alt="Image Description"
-					className="mt-4 rounded-lg"
+					className="mt-4 shadow-lg shadow-gray-400"
 				/>
-				<a
-					href="#"
-					className="mt-4 inline-block px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">
-					Read More
-				</a>
+				<RButton>Read More</RButton>
 			</div>
 			<div className="w-1/4 mr-4 shadow-lg">
 				{imageArray.map((item, index) => (

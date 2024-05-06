@@ -1,6 +1,3 @@
-
-
-
 import Carousel from "./Carousel";
 import Cater from "./Cater";
 import Designs from "./Designs";
@@ -10,15 +7,13 @@ import ServicesSection from "./ServiceSection";
 
 function Home() {
 	return (
-		<div>
+		<div className="text-gray-700">
 			<Carousel />
 			<MiniProductsAndServices />
-			<Designs/>
-			<Cater/>
-			<ServicesSection/>
-			<Info/>
-			
-			
+			<Designs />
+			<Cater />
+			<ServicesSection />
+			<Info />
 		</div>
 	);
 }
