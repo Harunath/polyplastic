@@ -40,8 +40,8 @@ const products = [
 				link: "/products/scrubbingsystems/fgd",
 			},
 			{
-				name: "FGD (Flue Gas Desulphurisation)",
-				link: "/products/scrubbingsystems/fgd",
+				name: "Centrifugal Blowers",
+				link: "/products/scrubbingsystems/centrifugalblowers",
 			},
 		],
 	},
@@ -58,9 +58,9 @@ const products = [
 		link: "/products/fluoropolymercoatings",
 	},
 	{
-		products: "Special Products",
+		name: "Special Products",
 		link: "/products/specialproducts",
-		SubProducts: [
+		subProducts: [
 			{
 				name: "Gratings , Railings Systems & Cable tray",
 				link: "/products/specialproducts/grating",

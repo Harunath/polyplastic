@@ -39,7 +39,13 @@ function Products() {
 					<path d="M7 10l5 5 5-5z" />
 				</svg>
 			</span>
-			{openProducts ? <ProductsDropdown /> : ""}
+			{openProducts ? (
+				<div className=" absolute w-20 md:w-60 left-0 top-full z-10 rounded border border-t-0 border-gray-300 bg-white pt-2 mt-1">
+					<ProductsDropdown />
+				</div>
+			) : (
+				""
+			)}
 		</div>
 	);
 }
