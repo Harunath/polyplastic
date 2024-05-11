@@ -8,9 +8,6 @@ const ATitle: React.FC<ATitleProps> = ({ title }) => {
 	const inView = useInView(ref, {
 		amount: "all",
 	});
-	useEffect(() => {
-		console.log(inView ? "Visible" : "not");
-	}, [inView]);
 	return (
 		<div ref={ref}>
 			<motion.p
@@ -35,7 +32,7 @@ const ATitle: React.FC<ATitleProps> = ({ title }) => {
 					scale: 0,
 					y: "-200%",
 				}}
-				className="text-4xl font-light text-center">
+				className="text-4xl font-light">
 				{title}
 			</motion.p>
 		</div>

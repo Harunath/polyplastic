@@ -76,7 +76,9 @@ const Cater = () => {
 			{/* <div className="flex justify-center">
 				<p className=" text-4xl w-fit font-light mb-10">Industry we Cater</p>
 			</div> */}
-			<ATitle title="Industry we Cater" />
+			<div className="text-center">
+				<ATitle title="Industry we Cater" />
+			</div>
 			<div className="grid grid-cols-2 lg:grid-cols-4 gap-4 my-5 mt-10">
 				{items.map((item, index) => (
 					<div

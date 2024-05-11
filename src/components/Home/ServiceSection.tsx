@@ -22,7 +22,9 @@ const ServiceSection = () => {
 					<h2>High Quality Services</h2>
 					<h2>For Industries</h2>
 				</div> */}
-				<ATitle title="High Quality Services For Industries" />
+				<div className="text-center">
+					<ATitle title="High Quality Services For Industries" />
+				</div>
 				<div className="flex flex-col md:flex-row justify-center items-center mt-10">
 					<div className="md:w-1/3 mb-3 md:mb-0">
 						<img
