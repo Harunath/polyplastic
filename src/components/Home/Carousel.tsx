@@ -12,6 +12,7 @@ const Carousel = () => {
 		autoplay: true,
 		autoplaySpeed: 2000,
 		pauseOnHover: false,
+		arrows: false,
 	};
 
 	return (

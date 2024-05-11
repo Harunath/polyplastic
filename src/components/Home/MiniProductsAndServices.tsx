@@ -1,12 +1,11 @@
+import ATitle from "../ATitle";
 import RButton from "../RButton";
 
 const MiniProductsAndServices = () => {
 	return (
-		<div className="flex justify-center gap-8 w-5/6 mx-auto mt-20">
-			<div className="w-3/4">
-				<p className="text-4xl font-light text-center">
-					Full Range of Composite Products & Services
-				</p>
+		<div className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 lg-px-0 w-full lg:w-5/6 lg:mx-auto mt-20">
+			<div className="w-full lg:w-3/4">
+				<ATitle title="Full Range of Composite Products & Services" />
 				<p className="text-gray-700 mt-5">
 					POLY PLAST CHEMI-PLANTS(INDIA) PVT LTD has been providing global
 					solutions to fight corrosion since 1967. With our strength of more
@@ -22,7 +21,7 @@ const MiniProductsAndServices = () => {
 				/>
 				<RButton>Read More</RButton>
 			</div>
-			<div className="w-1/4 mr-4 shadow-lg">
+			<div className="w-full lg:w-1/4 mx-auto mr-4 shadow-lg">
 				{imageArray.map((item, index) => (
 					<div
 						key={index}
