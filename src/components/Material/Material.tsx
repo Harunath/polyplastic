@@ -1,6 +1,7 @@
 import TopBanner from "../TopBanner";
 
 import AllMaterials from "./AllMaterials";
+import Intro from "./Intro";
 
 
 
@@ -10,6 +11,7 @@ function Material() {
 	return (
 		<div>
 			<TopBanner image={image} text="Material" />
+			<Intro/>
 			<AllMaterials/>
 		</div>
 	);
