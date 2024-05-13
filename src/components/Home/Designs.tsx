@@ -3,16 +3,15 @@ import RButton from "../RButton";
 
 const Designs = () => {
 	return (
-		<div className="flex flex-col lg:flex-row justify-between items-center bg-gray-200 mt-20">
+		<div className="flex flex-col lg:flex-row justify-between bg-gray-200 px-4 lg:px-0 mt-20">
 			{/* left content */}
-			<div className="flex flex-col lg:flex-row lg:w-1/2 h-full px-4 lg:px-0">
+			<div className="flex flex-col lg:flex-row lg:w-1/2">
 				<img
 					className="w-3/4 lg:w-1/2 h-auto mx-auto"
 					src="https://www.polyplast.co.in/assets/img/manufacturing-s.webp?4"
 					alt="Left Image"
 				/>
-				<div className="px-5 lg:px-10 my-10 lg:my-20">
-					{/* <p className="text-4xl font-extralight mb-2">Manufacturing</p> */}
+				<div className="px-5 lg:px-10 self-start my-10 lg:my-20">
 					<ATitle title="Manufacturing" />
 					<p className="text-gray-700 mb-4 mt-2">
 						We design and manufacture composite items, selecting the best
@@ -22,9 +21,8 @@ const Designs = () => {
 				</div>
 			</div>
 			{/* right content */}
-			<div className="flex flex-col lg:flex-row lg:flex-1 h-full border-l border-gray-300">
+			<div className="flex flex-col lg:flex-row lg:flex-1 border-0 lg:border-l border-gray-300">
 				<div className="px-5 lg:px-10 my-10 lg:my-20">
-					{/* <p className="text-4xl font-extralight mb-2">Engineering</p> */}
 					<ATitle title="Engineering" />
 					<p className="text-gray-700 mb-4 mt-2">
 						POLY PLAST offers optimized pipe systems design and engineering,

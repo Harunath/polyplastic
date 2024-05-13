@@ -1,3 +1,5 @@
+import SubProducts from "../components/Navbar/SubProducts";
+
 const products = [
 	{
 		name: "Chemical Equipment",
@@ -52,6 +54,16 @@ const products = [
 	{
 		name: "Fluoropolymer Lining",
 		link: "/products/fluoropolymerlining",
+		SubProducts: [
+			{
+				name: "Fabric Sheet Lining / Bonded Sheet Linings",
+				link: "/products/fluoropolymerlining/fsl_bsl",
+			},
+			{
+				name: "Machincal bonded Lining / Un-Bonded Lining / Loose Lining",
+				Link: "/products/fluoropolymerlining/mbl_ubl_ll",
+			},
+		],
 	},
 	{
 		name: "Fluoropolymer Coatings",

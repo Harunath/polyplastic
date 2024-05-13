@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+import products from "../assets/products";
 
 export const navState = atom({
 	key: "navState",
@@ -19,4 +20,9 @@ export const ENQUIRY_TEMPLATE_ID = atom({
 export const PUBLIC_KEY = atom({
 	key: "PUBLIC_KEY",
 	default: "6b-Wi09HIBq5-NOJE",
+});
+
+export const selectedProduct = atom({
+	key: "selectedProduct",
+	default: products[0],
 });

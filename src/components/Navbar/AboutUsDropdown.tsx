@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function AboutUsDropdown() {
 	return (
-		<div className=" absolute w-20 md:w-40 left-0 top-full rounded border border-t-0 border-gray-300 bg-white pt-2 z-20">
+		<div className=" lg:absolute w-full lg:w-40 left-0 top-full rounded text-center lg:text-start lg:border border-t-0 border-gray-300 lg:bg-white pt-2 z-20">
 			<div className="w-full">
 				<div className=" hover:bg-blue-500 transition-color duration-300">
 					<Link to="/whoweare" className="w-full h-full">

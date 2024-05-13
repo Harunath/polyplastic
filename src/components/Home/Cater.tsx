@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ATitle from "../ATitle";
 
 const Cater = () => {
@@ -84,10 +85,17 @@ const Cater = () => {
 					<div
 						key={index}
 						className="flex flex-col gap-5 justify-center items-center bg-white rounded-lg shadow-lg p-4">
-						<img
+						<motion.img
+							initial={{
+								scale: 1,
+							}}
+							whileHover={{
+								scale: 1.2,
+								transition: { duration: 0.3 },
+							}}
 							src={item.imgSrc}
 							alt={item.text}
-							className=" w-2/5 hover:w-[calc(35%)] transition-all duration-700 h-fit rounded-full border-8 border-gray-200 p-2 m-auto "
+							className=" w-2/5 h-fit rounded-full border-8 border-gray-200 p-2 m-auto "
 						/>
 						<p className="text-center whitespace-nowrap">
 							<span className="block md:hidden">

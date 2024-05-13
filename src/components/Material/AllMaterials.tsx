@@ -17,29 +17,31 @@ const AllMaterials = () => {
 	];
 	const [selected, setSelected] = useState(0);
 	return (
-		<div className=" flex gap-x-10 bg-gray-200 w-5/6  p-2 mx-auto mt-10 ">
-			<div className="w-1/4">
-				{materials.map((material, index) => (
-					<div
-						className=" border-b border-gray-400 py-1"
-						key={material.id}
-						onClick={() => {
-							setSelected(index);
-						}}>
-						<p
-							className={` px-4 py-2 text-sm ${
-								selected == index ? "text-yellow-500" : "text-black"
-							}`}>
-							{material.name}
-						</p>
-					</div>
-				))}
-			</div>
-			<div className="w-3/4">
-				<EachMaterial
-					name={materials[selected].name}
-					content={materials[selected].content}
-				/>
+		<div className=" bg-gray-200">
+			<div className=" flex gap-x-10 w-5/6  p-2 mx-auto mt-10 ">
+				<div className="w-1/4">
+					{materials.map((material, index) => (
+						<div
+							className=" border-b border-gray-400 py-1"
+							key={material.id}
+							onClick={() => {
+								setSelected(index);
+							}}>
+							<p
+								className={` px-4 py-2 text-sm ${
+									selected == index ? "text-yellow-500" : "text-black"
+								}`}>
+								{material.name}
+							</p>
+						</div>
+					))}
+				</div>
+				<div className="w-3/4">
+					<EachMaterial
+						name={materials[selected].name}
+						content={materials[selected].content}
+					/>
+				</div>
 			</div>
 		</div>
 	);
