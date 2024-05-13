@@ -9,7 +9,7 @@ interface Product {
 const SubProducts: React.FC<Product> = ({ name, link }) => {
 	return (
 		<div className="w-full hover:bg-blue-500 transition-color duration-300">
-			<Link to="/products">
+			<Link to={link}>
 				<p className="p-2">{name}</p>
 			</Link>
 		</div>

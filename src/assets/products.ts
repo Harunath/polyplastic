@@ -1,5 +1,3 @@
-import SubProducts from "../components/Navbar/SubProducts";
-
 const products = [
 	{
 		name: "Chemical Equipment",

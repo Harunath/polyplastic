@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 interface ATitleProps {
 	title: string;
 }
