@@ -10,8 +10,8 @@ function Products() {
 	return (
 		<div>
 			<TopBanner image={image} text="Products" />
-			<div className="flex mt-10 w-5/6 mx-auto">
-				<div className="w-2/5">
+			<div className="flex mt-10 w-5/6 mx-auto gap-x-10">
+				<div className="w-1/5">
 					{products.map((product, index) => (
 						<div>
 							<EachProducts
