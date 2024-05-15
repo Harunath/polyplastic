@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-gray-600 text-white py-8 mt-5">
+    <footer className="relative bg-gray-600 text-white py-8 mt-5 lg:p-10">
       <div className="container mx-auto relative">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 p-2"> {/* Quick Links */}
