@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Intro = () => {
+const Intro: React.FC = () => {
 	const [expanded, setExpanded] = useState(false);
 	const toggleExpanded = () => setExpanded(!expanded);
 
@@ -18,71 +18,68 @@ const Intro = () => {
 		"Providing computerized design services including isometric and construction drawings.",
 	];
 
+	const arrowStyle = {
+		width: 0,
+		height: 0,
+		borderTop: "6px solid transparent",
+		borderBottom: "6px solid transparent",
+		borderLeft: "6px solid red",
+		marginRight: "0.5rem",
+	};
+
 	return (
-		<div id="hm-products" className="py-5 px-20 container">
-			<p className="txt-justify mb-4">
-				'Rolan Plast' plays a part and cooperates in your project execution
-				during the journey, ensuring that your project is managed pleasantly &
-				accurately.
-			</p>
-			<p className="txt-justify mb-2">
-				Our project management mixture includes:
-			</p>
-			<ul className="mt-2 pl-5 list-none">
-				<li className="mb-2 relative flex items-center">
-					<span
-						style={{
-							width: "0",
-							height: "0",
-							borderTop: "6px solid transparent",
-							borderBottom: "6px solid transparent",
-							borderRight: "6px solid red",
-							marginRight: "0.5rem",
-						}}></span>
-					Discuss & developing an overall project execution plan and workflow
-					with customer requirement.
-				</li>
-			</ul>
-			<AnimatePresence initial={false}>
-				{expanded && (
-					<motion.ul
-						initial="collapsed"
-						animate="open"
-						exit="collapsed"
-						variants={{
-							open: { opacity: 1, height: "auto" },
-							collapsed: { opacity: 0, height: 0 },
-						}}
-						transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
-						className="pl-5 list-none">
-						{steps.map((step, index) => (
-							<li key={index} className="mb-2 relative flex items-center">
-								<span
-									style={{
-										width: "0",
-										height: "0",
-										borderTop: "6px solid transparent",
-										borderBottom: "6px solid transparent",
-										borderRight: "6px solid red",
-										marginRight: "0.5rem",
-									}}></span>
-								{step}
-							</li>
-						))}
-					</motion.ul>
-				)}
-			</AnimatePresence>
-			<div className="pb-4">
-				<u>
-					<a
-						onClick={toggleExpanded}
-						className="moreless-button text-dark fw-bold cursor-pointer">
-						{expanded ? "Read less" : "Read more"}
-					</a>
-				</u>
+		<div id="hm-products" className="py-5 px-4 container mx-auto">
+			<div className="lg:ml-10"> {/* Added left margin for large screens */}
+				<p className="text-justify mb-4">
+					'Rolan Plast' plays a part and cooperates in your project execution
+					during the journey, ensuring that your project is managed pleasantly &
+					accurately.
+				</p>
+				<p className="text-justify mb-2">
+					Our project management mixture includes:
+				</p>
+				<ul className="mt-2 pl-5 list-none">
+					<li className="mb-2 relative flex items-center">
+						<span style={arrowStyle}></span>
+						Discuss & developing an overall project execution plan and workflow
+						with customer requirement.
+					</li>
+				</ul>
+				<AnimatePresence initial={false}>
+					{expanded && (
+						<motion.ul
+							initial="collapsed"
+							animate="open"
+							exit="collapsed"
+							variants={{
+								open: { opacity: 1, height: "auto" },
+								collapsed: { opacity: 0, height: 0 },
+							}}
+							transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+							className="pl-5 list-none">
+							{steps.map((step, index) => (
+								<li key={index} className="mb-2 relative flex items-center">
+									<span style={arrowStyle}></span>
+									{step}
+								</li>
+							))}
+						</motion.ul>
+					)}
+				</AnimatePresence>
+				<div className="pb-4">
+					<u>
+						<a
+							onClick={toggleExpanded}
+							className="text-dark font-bold cursor-pointer">
+							{expanded ? "Read less" : "Read more"}
+						</a>
+					</u>
+				</div>
 			</div>
 		</div>
 	);
 };
 
 export default Intro;
+
+
