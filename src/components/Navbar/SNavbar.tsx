@@ -14,7 +14,7 @@ const SNavbar = () => {
 	useEffect(() => {
 		// Function to close dropdown when clicking outside of it
 		const handleClickOutside = (event: { target: any }) => {
-			if (menuRef.current) {
+			if (menuRef.current && menuRef.current.contains(event.target)) {
 				setDropdown(!dropdown);
 			} else {
 				if (

@@ -39,8 +39,8 @@ function SProduct() {
 					</svg>
 				</span>
 			</div>
-			{openAboutUs && (
-				<AnimatePresence>
+			<AnimatePresence>
+				{openAboutUs && (
 					<motion.div
 						initial={{ opacity: 0, height: 0 }}
 						animate={{ opacity: 1, height: "auto" }}
@@ -61,8 +61,8 @@ function SProduct() {
 							))}
 						</div>
 					</motion.div>
-				</AnimatePresence>
-			)}
+				)}
+			</AnimatePresence>
 		</div>
 	);
 }

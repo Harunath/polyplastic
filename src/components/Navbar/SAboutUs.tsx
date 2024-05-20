@@ -38,12 +38,15 @@ function SAboutUs() {
 					</svg>
 				</span>
 			</div>
-			{openAboutUs && (
-				<AnimatePresence>
+			<AnimatePresence>
+				{openAboutUs && (
 					<motion.div
 						initial={{ opacity: 0, height: 0 }}
-						animate={{ opacity: 1, height: "auto" }}
-						exit={{ opacity: 0, height: 0 }}
+						animate={{ opacity: 1, height: "auto", scale: 1 }}
+						exit={{
+							opacity: 0,
+							height: 0,
+						}}
 						transition={{ duration: 0.3 }}
 						style={{
 							overflow: "hidden", // Ensure overflow is hidden to prevent content from overflowing
@@ -51,8 +54,8 @@ function SAboutUs() {
 						className="flex flex-col justify-center items-center gap-y-2 md:gap-y-4 w-5/6 bg-white rounded p-2 mx-auto">
 						<AboutUsDropdown />
 					</motion.div>
-				</AnimatePresence>
-			)}
+				)}
+			</AnimatePresence>
 		</div>
 	);
 }
