@@ -69,14 +69,10 @@ const Cater = () => {
 			imgSrc: "https://www.polyplast.co.in/assets/img/fertilizar.png",
 			text: "Fertilizers / Insecticides / Pesticides",
 		},
-		// Add more items as needed
 	];
 
 	return (
 		<div className="mt-20 px-10">
-			{/* <div className="flex justify-center">
-				<p className=" text-4xl w-fit font-light mb-10">Industry we Cater</p>
-			</div> */}
 			<div className="text-center">
 				<ATitle title="Industry we Cater" />
 			</div>
@@ -95,7 +91,7 @@ const Cater = () => {
 							}}
 							src={item.imgSrc}
 							alt={item.text}
-							className=" w-2/5 h-fit rounded-full border-8 border-gray-200 p-2 m-auto "
+							className="w-full lg:w-2/5 h-fit rounded-full border-8 border-gray-200 p-2 m-auto "
 						/>
 						<p className="text-center whitespace-nowrap">
 							<span className="block md:hidden">
