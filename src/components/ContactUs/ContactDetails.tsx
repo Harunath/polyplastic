@@ -1,5 +1,10 @@
-import React from 'react';
-import { MdPhone, MdMailOutline, MdLocationOn, MdBusiness } from 'react-icons/md';
+import React from "react";
+import {
+	MdPhone,
+	MdMailOutline,
+	MdLocationOn,
+	MdBusiness,
+} from "react-icons/md";
 
 const ContactDetails: React.FC = () => {
 	return (
@@ -50,6 +55,3 @@ const ContactDetails: React.FC = () => {
 };
 
 export default ContactDetails;
-
-
-
