@@ -10,17 +10,21 @@ const SNavbar = () => {
 	const [svgHover, setSvgHover] = useState("black");
 
 	const dropdownRef = useRef<HTMLDivElement>(null);
+	const menuRef = useRef<HTMLButtonElement>(null);
 	useEffect(() => {
 		// Function to close dropdown when clicking outside of it
 		const handleClickOutside = (event: { target: any }) => {
-			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-				setDropdown(false);
-			}
-			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-				setDropdown(false);
+			if (menuRef.current) {
+				setDropdown(!dropdown);
+			} else {
+				if (
+					dropdownRef.current &&
+					!dropdownRef.current.contains(event.target)
+				) {
+					setDropdown(false);
+				}
 			}
 		};
-
 		// Add event listener when the component mounts
 		document.addEventListener("mousedown", handleClickOutside);
 
@@ -28,7 +32,7 @@ const SNavbar = () => {
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
-	}, [dropdownRef, dropdown]);
+	}, [dropdownRef, menuRef, dropdown]);
 	return (
 		<nav className="shadow-xl shadow-gray-400 flex flex-col justify-between items-center lg:hidden">
 			<div className=" relative flex justify-end items-center gap-x-4 bg-white w-full h-12 py-1 px-4 pr-20">
@@ -37,24 +41,36 @@ const SNavbar = () => {
 						<img className="h-full" src={logo} alt="Logo" />
 					</Link>
 				</div>
-				<button
-					onClick={() => {
-						setDropdown(!dropdown);
-					}}>
-					<svg
+				<button ref={menuRef}>
+					<motion.svg
+						initial={{
+							rotate: 90,
+						}}
+						animate={
+							dropdown
+								? {
+										rotate: 0,
+								  }
+								: {
+										rotate: 90,
+								  }
+						}
+						transition={{
+							duration: 0.5,
+						}}
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
 						width="24"
 						height="24">
 						<path fill="none" d="M0 0h24v24H0z" />
 						<path
-							d="M4 6h16M4 12h16M4 18h16"
+							d="M6 4v16M12 4v16M18 4v16"
 							stroke="currentColor"
 							strokeWidth="2"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 						/>
-					</svg>
+					</motion.svg>
 				</button>
 			</div>
 			<AnimatePresence>
@@ -63,7 +79,10 @@ const SNavbar = () => {
 						ref={dropdownRef}
 						initial={{ opacity: 0, height: 0 }}
 						animate={{ opacity: 1, height: "auto" }}
-						exit={{ opacity: 0, height: 0 }}
+						exit={{
+							opacity: 0,
+							height: 0,
+						}}
 						transition={{ duration: 0.3 }}
 						style={{
 							overflow: "hidden", // Ensure overflow is hidden to prevent content from overflowing
