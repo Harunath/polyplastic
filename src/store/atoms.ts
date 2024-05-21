@@ -26,3 +26,8 @@ export const selectedProduct = atom({
 	key: "selectedProduct",
 	default: products[0],
 });
+
+export const menuDropdown = atom({
+	key: "menuDropdown",
+	default: false,
+});

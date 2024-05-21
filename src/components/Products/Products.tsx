@@ -15,8 +15,8 @@ function Products() {
 					{products.map((product, index) => (
 						<div>
 							<EachProducts
-								key={index}
-								name={product.name as string}
+								key={"p" + index}
+								name={product.name}
 								link={product.link}
 								subProducts={product.subProducts}
 							/>

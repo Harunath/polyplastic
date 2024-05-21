@@ -7,6 +7,7 @@ function SProduct() {
 	const [openAboutUs, setOpenAboutUs] = useState(false);
 
 	const dropdownRef = useRef<HTMLDivElement>(null);
+
 	useEffect(() => {
 		// Function to close dropdown when clicking outside of it
 		const handleClickOutside = (event: { target: any }) => {

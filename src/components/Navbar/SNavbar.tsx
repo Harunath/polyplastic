@@ -4,13 +4,16 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SAboutUs from "./SAboutUs";
 import SProduct from "./SProducts";
+import { useRecoilState } from "recoil";
+import { menuDropdown } from "../../store/atoms";
 
 const SNavbar = () => {
-	const [dropdown, setDropdown] = useState(false);
+	const [dropdown, setDropdown] = useRecoilState(menuDropdown);
 	const [svgHover, setSvgHover] = useState("black");
 
 	const dropdownRef = useRef<HTMLDivElement>(null);
 	const menuRef = useRef<HTMLButtonElement>(null);
+
 	useEffect(() => {
 		// Function to close dropdown when clicking outside of it
 		const handleClickOutside = (event: { target: any }) => {
@@ -110,7 +113,7 @@ const SNavbar = () => {
 							<SAboutUs />
 							<SProduct />
 							<div>
-								<button>
+								<button onClick={() => setDropdown(false)}>
 									<Link
 										className="text-black text-md hover:text-blue-500 transition-color duration-500"
 										to="/material">
@@ -119,7 +122,7 @@ const SNavbar = () => {
 								</button>
 							</div>
 							<div>
-								<button>
+								<button onClick={() => setDropdown(false)}>
 									<Link
 										className="text-black text-md hover:text-blue-500 transition-color duration-500"
 										to="/projects">
@@ -128,7 +131,7 @@ const SNavbar = () => {
 								</button>
 							</div>
 							<div>
-								<button>
+								<button onClick={() => setDropdown(false)}>
 									<Link
 										className=" text-md hover:text-blue-500 transition-color duration-500"
 										to="/contactus">

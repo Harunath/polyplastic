@@ -12,15 +12,14 @@ const EachSubProduct: React.FC<SubProductProps> = ({ name, link }) => {
 	const setProduct = useSetRecoilState(selectedProduct);
 	return (
 		<div className="flex items-center py-2 px-4">
-			<span
-				style={{
-					width: "0",
-					height: "0",
-					borderTop: "6px solid transparent",
-					borderBottom: "6px solid transparent",
-					borderLeft: "6px solid red",
-					marginRight: "0.5rem",
-				}}></span>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 12 12"
+				width="12"
+				height="12"
+				className="h-2 w-2">
+				<polygon points="0,0 0,12 12,6" fill="red" />
+			</svg>
 			<Link
 				onClick={() => setProduct({ name: name, link: link })}
 				to={link}

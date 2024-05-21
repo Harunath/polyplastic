@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import SubProducts from "./SubProducts";
 import { Link } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { menuDropdown } from "../../store/atoms";
 
 interface SubProducts {
 	name: string;
@@ -15,13 +17,14 @@ interface Product {
 }
 
 const EachProduct: React.FC<Product> = ({ name, link, subProducts }) => {
+	const setMenuDropdown = useSetRecoilState(menuDropdown);
 	const [extend, setExtend] = useState(false);
 	return (
 		<div
 			className=" hover:bg-blue-500 transition-color duration-300 relative text-center lg:text-start"
 			onMouseOver={() => setExtend(true)}
 			onMouseLeave={() => setExtend(false)}>
-			<Link to={link} className="w-full">
+			<Link onClick={() => setMenuDropdown(false)} to={link} className="w-full">
 				<p className="text-black p-2">{name}</p>
 			</Link>
 			<div className="hidden lg:block">
