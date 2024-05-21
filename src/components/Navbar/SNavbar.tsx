@@ -92,7 +92,7 @@ const SNavbar = () => {
 						}}
 						className="bg-white w-full p-1">
 						<div className=" flex flex-col justify-center items-center gap-y-2 md:gap-y-4 w-5/6 bg-gray-100 border border-black rounded p-2 mx-auto">
-							<Link to="/">
+							<Link onClick={() => setDropdown(false)} to="/">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"
