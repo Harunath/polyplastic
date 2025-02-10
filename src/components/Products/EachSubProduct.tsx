@@ -6,10 +6,20 @@ import { selectedProduct } from "../../store/atoms";
 interface SubProductProps {
 	name: string;
 	link: string;
+	description: string;
 }
 
-const EachSubProduct: React.FC<SubProductProps> = ({ name, link }) => {
+const EachSubProduct: React.FC<SubProductProps> = ({
+	name,
+	link,
+	description,
+}) => {
 	const setProduct = useSetRecoilState(selectedProduct);
+
+	const handleClick = () => {
+		setProduct({ name, link, description });
+	};
+
 	return (
 		<div className="flex items-center py-2 px-4">
 			<svg
@@ -20,10 +30,7 @@ const EachSubProduct: React.FC<SubProductProps> = ({ name, link }) => {
 				className="h-2 w-2">
 				<polygon points="0,0 0,12 12,6" fill="red" />
 			</svg>
-			<Link
-				onClick={() => setProduct({ name: name, link: link })}
-				to={link}
-				className="text-gray-800">
+			<Link onClick={handleClick} to={link} className="text-gray-800">
 				<span>{name}</span>
 			</Link>
 		</div>

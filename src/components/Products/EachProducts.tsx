@@ -4,10 +4,12 @@ import EachSubProduct from "./EachSubProduct";
 import { Link } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { selectedProduct } from "../../store/atoms";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"; // Import the icons
 
 interface SubProduct {
 	name: string;
 	link: string;
+	description: string;
 }
 
 interface Product {
@@ -25,40 +27,20 @@ const EachProducts: React.FC<Product> = ({ name, link, subProducts }) => {
 	};
 
 	return (
-		<div className=" border-b border-gray-300">
+		<div className="border-b border-gray-300">
 			<div className="flex flex-col md:flex-row justify-between p-4">
-				<Link onClick={() => setProduct({ name: name, link: link })} to={link}>
+				<Link
+					onClick={() =>
+						setProduct({ name: name, link: link, description: "" })
+					}
+					to={link}>
 					<p>{name}</p>
 				</Link>
 				<button onClick={toggleExtend} className="mt-2 md:mt-0">
 					{extend ? (
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							width="24"
-							height="24">
-							<path
-								d="M5 12H19"
-								stroke="currentColor"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
+						<AiOutlineMinus size={24} /> // Collapse icon (minus)
 					) : (
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							width="24"
-							height="24">
-							<path
-								d="M12 5V19M5 12H19"
-								stroke="currentColor"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
+						<AiOutlinePlus size={24} /> // Expand icon (plus)
 					)}
 				</button>
 			</div>
@@ -80,6 +62,7 @@ const EachProducts: React.FC<Product> = ({ name, link, subProducts }) => {
 									key={index}
 									name={product.name}
 									link={product.link}
+									description={product.description}
 								/>
 							))}
 					</motion.div>
