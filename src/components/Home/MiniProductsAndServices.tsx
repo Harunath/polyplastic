@@ -45,22 +45,22 @@ const MiniProductsAndServices = () => {
 
 const imageArray = [
 	{
-		src: "src/assets/MiniProductsAndServices/performance-icon-1.webp",
+		src: "https://res.cloudinary.com/dip2khkyo/image/upload/v1739211318/performance-icon-1_npixf0.webp",
 		value: "56",
 		label: "Years of Experience",
 	},
 	{
-		src: "src/assets/MiniProductsAndServices/performance-icon-2.webp",
+		src: "https://res.cloudinary.com/dip2khkyo/image/upload/v1739211346/performance-icon-2_s5xqtv.webp",
 		value: "100+",
 		label: "Projects",
 	},
 	{
-		src: "src/assets/MiniProductsAndServices/performance-icon-3.webp",
+		src: "https://res.cloudinary.com/dip2khkyo/image/upload/v1739211373/performance-icon-3_ys36ly.webp",
 		value: "10+",
 		label: "Products",
 	},
 	{
-		src: "src/assets/MiniProductsAndServices/performance-icon-4.webp",
+		src: "https://res.cloudinary.com/dip2khkyo/image/upload/v1739211402/performance-icon-4_hmckm0.webp",
 		value: "100+",
 		label: "Happy Clients",
 	},
