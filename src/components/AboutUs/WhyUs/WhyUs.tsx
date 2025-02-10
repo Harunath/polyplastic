@@ -3,7 +3,7 @@ import Services from "./Services";
 
 function WhyUs() {
 	const image =
-		"https://computerbazzar.com/wp-content/uploads/2019/03/why_us_banner-860x269.jpg";
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209995/why_us_banner-860x269_ogjyyo.jpg";
 	return (
 		<div>
 			{/* <HeroSection/> */}

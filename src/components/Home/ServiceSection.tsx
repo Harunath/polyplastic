@@ -2,10 +2,10 @@ import ATitle from "../ATitle";
 
 const ServiceSection = () => {
 	const images = [
-		"https://www.polyplast.co.in/assets/img/service-icon-1.webp",
-		"https://www.polyplast.co.in/assets/img/service-icon-2.webp",
-		"https://www.polyplast.co.in/assets/img/service-icon-3.webp",
-		"https://www.polyplast.co.in/assets/img/service-icon-4.webp",
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209270/service-icon-1_msdnaz.webp",
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209309/service-icon-2_urge2x.webp",
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209331/service-icon-3_se2nsp.webp",
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209353/service-icon-4_csuqew.webp",
 	];
 
 	const serviceTitles = [
@@ -28,8 +28,8 @@ const ServiceSection = () => {
 				<div className="flex flex-col md:flex-row justify-center items-center mt-10">
 					<div className="md:w-1/3 mb-3 md:mb-0">
 						<img
-							src="https://www.polyplast.co.in/assets/img/services-img.webp"
-							className="h-80 " // Increased height and added animation
+							src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739209520/services-img_liqhxd.webp"
+							className="h-80 "
 							alt="Services"
 						/>
 					</div>

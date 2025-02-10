@@ -20,42 +20,42 @@ const Carousel = () => {
 			<Slider {...settings}>
 				<div className=" max-h-screen">
 					<img
-						src="https://www.polyplast.co.in/assets/img/hero-banner6.webp?3"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739208237/tmbwi6sdvj0cjmmx0zdp.webp"
 						className="w-full h-auto rounded-md shadow-md"
 						alt="Slide 1"
 					/>
 				</div>
 				<div className=" max-h-screen">
 					<img
-						src="https://www.polyplast.co.in/assets/img/hero-banner4.webp?2"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739208312/hero-banner4_sgd6jh.webp"
 						className="w-full h-auto rounded-md shadow-md"
 						alt="Slide 2"
 					/>
 				</div>
 				<div className=" max-h-screen">
 					<img
-						src="https://www.polyplast.co.in/assets/img/hero-banner5.webp?2"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739208340/hero-banner5_psajws.webp"
 						className="w-full h-auto rounded-md shadow-md"
 						alt="Slide 3"
 					/>
 				</div>
 				<div className=" max-h-screen">
 					<img
-						src="https://www.polyplast.co.in/assets/img/hero-banner1.webp?2"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739208370/hero-banner1_mid5af.webp"
 						className="w-full h-auto rounded-md shadow-md"
 						alt="Slide 4"
 					/>
 				</div>
 				<div className=" max-h-screen">
 					<img
-						src="https://www.polyplast.co.in/assets/img/hero-banner2.webp?2"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739208397/hero-banner2_sz8n6j.webp"
 						className="w-full h-auto rounded-md shadow-md"
 						alt="Slide 5"
 					/>
 				</div>
 				<div className=" max-h-screen">
 					<img
-						src="https://www.polyplast.co.in/assets/img/hero-banner3.webp??2"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739208435/hero-banner3_oqmdfk.webp"
 						className="w-full h-auto rounded-md shadow-md"
 						alt="Slide 6"
 					/>

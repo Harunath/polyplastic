@@ -8,7 +8,7 @@ const Designs = () => {
 			<div className="flex flex-col lg:flex-row lg:w-1/2">
 				<img
 					className="w-3/4 lg:w-1/2 h-auto mx-auto"
-					src="https://www.polyplast.co.in/assets/img/manufacturing-s.webp?4"
+					src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739209054/manufacturing-s_y9a3up.webp"
 					alt="Left Image"
 				/>
 				<div className="px-5 lg:px-10 self-start my-10 lg:my-20">
@@ -32,7 +32,7 @@ const Designs = () => {
 					<RButton>Read More</RButton>
 				</div>
 				<img
-					src="https://www.polyplast.co.in/assets/img/technology-s.webp?2"
+					src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739209081/technology-s_cvcwll.webp"
 					alt="Right Image"
 					className="w-3/4 lg:w-1/2 h-auto mx-auto"
 				/>

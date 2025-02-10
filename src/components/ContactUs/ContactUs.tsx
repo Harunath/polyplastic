@@ -5,7 +5,7 @@ import TopBanner from "../TopBanner";
 
 function ContactUs() {
 	const image =
-		"https://ges.co.il/wp-content/uploads/2016/02/Contact-us-banner.jpg";
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739210096/Contact-us-banner_dhlcsf.jpg";
 	return (
 		<div>
 			<TopBanner image={image} text="ContactUs" />

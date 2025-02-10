@@ -5,7 +5,7 @@ import products from "../../assets/products";
 
 function Products() {
 	const image =
-		"https://wallup.net/wp-content/uploads/2017/11/22/404681-factory-industrial.jpg";
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739210419/404681-factory-industrial_b1efij.jpg";
 
 	return (
 		<div>

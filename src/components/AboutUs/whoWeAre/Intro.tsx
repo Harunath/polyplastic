@@ -1,6 +1,6 @@
 const Intro = () => {
 	const imageUrl =
-		"https://thumbs.dreamstime.com/b/group-engineer-manager-factory-workers-team-standing-against-production-line-194332375.jpg";
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209741/group-engineer-manager-factory-workers-team-standing-against-production-line-194332375_miqdad.jpg";
 
 	return (
 		<div className="bg-white p-8 rounded-lg shadow-lg">

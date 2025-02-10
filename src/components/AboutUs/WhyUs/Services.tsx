@@ -1,42 +1,45 @@
-
-
 const Services = () => {
 	const servicesData = [
 		{
 			id: 1,
-			imageUrl: "https://www.polyplast.co.in/assets/img/good-quality.webp",
+			imageUrl:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209820/good-quality_naikf9.webp",
 			description: "Consistent Good Quality",
 		},
 		{
 			id: 2,
-			imageUrl: "https://www.polyplast.co.in/assets/img/proactive-team.webp",
+			imageUrl:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209841/proactive-team_uxi9ym.webp",
 			description: "Proactive Team",
 		},
 		{
 			id: 3,
 			imageUrl:
-				"https://www.polyplast.co.in/assets/img/client-handholding.webp",
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209863/client-handholding_kjskt4.webp",
 			description: "Client Handholding",
 		},
 		{
 			id: 4,
 			imageUrl:
-				"https://www.polyplast.co.in/assets/img/installation-services.webp",
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209900/installation-services_pkny69.webp",
 			description: "Strong Site Team for Installation Services",
 		},
 		{
 			id: 5,
-			imageUrl: "https://www.polyplast.co.in/assets/img/site-team.webp",
+			imageUrl:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209920/site-team_b3jrba.webp",
 			description: "Motivated Site Team for Shutdown",
 		},
 		{
 			id: 6,
-			imageUrl: "https://www.polyplast.co.in/assets/img/market-price.webp",
+			imageUrl:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209941/market-price_uurhc5.webp",
 			description: "Reasonable Market Price",
 		},
 		{
 			id: 7,
-			imageUrl: "https://www.polyplast.co.in/assets/img/delivery-time.webp",
+			imageUrl:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209963/delivery-time_sao3u0.webp",
 			description: "Short Delivery Time",
 		},
 	];

@@ -35,7 +35,7 @@ const Intro = () => {
 				</div>
 				<div className="lg:w-1/4 mt-4 lg:mt-0">
 					<img
-						src="https://www.polyplast.co.in/assets/img/Material-pipe.webp"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739210249/Material-pipe_k0vz9y.webp"
 						className="mx-auto lg:mx-0 w-auto h-auto"
 						alt="Poly Plast"
 					/>

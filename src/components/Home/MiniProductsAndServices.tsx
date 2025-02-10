@@ -15,7 +15,7 @@ const MiniProductsAndServices = () => {
 					easily and becomes much cheaper than exotic metals.
 				</p>
 				<img
-					src="src/assets/MiniProductsAndServices/main.jpg"
+					src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739209215/main_ngvlz1.webp"
 					alt="Image Description"
 					className="mt-4 shadow-lg shadow-gray-400"
 				/>

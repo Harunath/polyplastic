@@ -50,7 +50,7 @@ const EnquiryForm = () => {
 		<div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
 			<div>
 				<img
-					src="https://www.polyplast.co.in/assets/img/contact-us-img.webp"
+					src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739210128/contact-us-img_xfcru4.webp"
 					alt="Enquiry Form"
 					className="w-5/6 m-auto"
 				/>

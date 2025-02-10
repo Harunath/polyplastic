@@ -3,7 +3,7 @@ import Intro from "./Intro";
 
 function WhoWeAre() {
 	const image =
-		"https://cdn6.dissolve.com/p/D145_288_084/D145_288_084_1200.jpg";
+		"https://res.cloudinary.com/dip2khkyo/image/upload/v1739209779/D145_288_084_1200_c1xxod.jpg";
 	return (
 		<div>
 			{/* <HeroSection/> */}

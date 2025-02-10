@@ -2,71 +2,90 @@ import { motion } from "framer-motion";
 import ATitle from "../ATitle";
 
 const Cater = () => {
-	// Array of objects containing image sources and text for rendering
 	const items = [
-		{ imgSrc: "https://www.polyplast.co.in/assets/img/oil.png", text: "Oil 1" },
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/pulp.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208574/oil_lknabe.png",
+			text: "Oil 1",
+		},
+		{
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208599/pulp_k5qizs.png",
 			text: "Pulp & Paper",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/architect.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208619/architect_ubby6z.png",
 			text: "Construction",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/telecommunications.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208639/telecommunications_bqpie9.png",
 			text: "Telecommunication",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/bromine.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208659/bromine_v9kkbb.png",
 			text: "Bromine",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/water.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208679/water_vflcbb.png",
 			text: "Water Treatment / Desalination",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/dyes.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208700/dyes_kymhmn.png",
 			text: "Dyes & Pigments",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/titanium.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208728/titanium_hxbnxq.png",
 			text: "Titanium Dioxide Pigment",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/mining.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208748/mining_i8tve0.png",
 			text: "Mineral Processing / Mining",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/manufactere.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208773/manufactere_ianauk.png",
 			text: "Original Equipment Manufacturer",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/fiber.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208793/fiber_cyce3p.png",
 			text: "Viscose / Fiber",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/ion.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208813/ion_mcpuay.png",
 			text: "Ion Exchange Resins",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/chlor.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208840/chlor_poctvc.png",
 			text: "Chlor Alkali",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/steel.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208861/steel_l12vg7.png",
 			text: "Steel",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/chemical.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208881/chemical_kldwu6.png",
 			text: "Chemical",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/pharma.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208905/pharma_knljnm.png",
 			text: "Pharmaceutical",
 		},
 		{
-			imgSrc: "https://www.polyplast.co.in/assets/img/fertilizar.png",
+			imgSrc:
+				"https://res.cloudinary.com/dip2khkyo/image/upload/v1739208926/fertilizar_jo8swb.png",
 			text: "Fertilizers / Insecticides / Pesticides",
 		},
 	];
