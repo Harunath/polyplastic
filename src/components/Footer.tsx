@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
 				<hr className="border-gray-700 my-6" />
 				<div className="text-sm text-center">
 					<p>
-						Copyright © 2024 Polyplast, All Rights Reserved. | Developed by
+						Copyright © 2024 Rolanplast, All Rights Reserved. | Developed by
 						<a
 							href="https://sushmasri.netlify.app"
 							className="text-blue-400 hover:underline ml-1">
