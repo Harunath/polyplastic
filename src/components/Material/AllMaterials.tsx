@@ -1,5 +1,4 @@
 import { useState } from "react";
-import EachMaterial from "./EachMaterial";
 
 const AllMaterials = () => {
 	const materials = [
