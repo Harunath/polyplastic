@@ -100,7 +100,7 @@ const FeedbackForm = () => {
 				</div>
 				<div className="md:w-1/2 p-4 pl-2">
 					<img
-						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739210167/feedback-polyplast_vqhqwf.webp"
+						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739210167/feedback-rolanplast_vqhqwf.webp"
 						alt="contact images"
 						className="w-full h-auto mr-4"
 					/>

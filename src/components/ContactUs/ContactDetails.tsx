@@ -29,7 +29,7 @@ const ContactDetails: React.FC = () => {
 						<MdMailOutline className="text-4xl text-blue-500" />
 						<p className="text-center font-light">Email</p>
 						<p className="text-center text-sm text-gray-500">
-							mktg@polyplast.co.in
+							rolanplast652@gmail.com
 						</p>
 					</div>
 					<div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center space-y-4 mx-2 sm:mx-0">

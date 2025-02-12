@@ -7,7 +7,7 @@ const MiniProductsAndServices = () => {
 			<div className="w-full lg:w-3/4">
 				<ATitle title="Full Range of Composite Products & Services" />
 				<p className="text-gray-700 mt-5">
-					POLY PLAST CHEMI-PLANTS(INDIA) PVT LTD has been providing global
+					ROLAN PLAST CHEMI-PLANTS(INDIA) PVT LTD has been providing global
 					solutions to fight corrosion since 1967. With our strength of more
 					than 400 skilled labourers and 18000 Sq Meters of fabrication. We
 					become the preferred choice for our customers. We cater to a niche

@@ -7,7 +7,7 @@ const Intro = () => {
 						Our plastic solutions are made using a wide range of synthetic
 						materials, with polymers as the main component. This allows us to
 						create products with various shapes, while also focusing on their
-						durability and flexibility. Poly Plast does not compromise with
+						durability and flexibility. Rolan Plast does not compromise with
 						quality, that is why we choose to work only with the best materials
 						on the market.
 					</p>
@@ -20,7 +20,7 @@ const Intro = () => {
 						compared with other materials.
 					</p>
 					<p className="mt-2 text-md text-justify">
-						In addition to components made entire from FRP, POLY PLAST also
+						In addition to components made entire from FRP, ROLAN PLAST also
 						manufactures products with an inner thermoplastic liner.
 					</p>
 					<p className="mt-2 text-md text-justify">
@@ -37,7 +37,7 @@ const Intro = () => {
 					<img
 						src="https://res.cloudinary.com/dip2khkyo/image/upload/v1739210249/Material-pipe_k0vz9y.webp"
 						className="mx-auto lg:mx-0 w-auto h-auto"
-						alt="Poly Plast"
+						alt="Rolan Plast"
 					/>
 				</div>
 			</div>

@@ -25,7 +25,7 @@ const Designs = () => {
 				<div className="px-5 lg:px-10 my-10 lg:my-20">
 					<ATitle title="Engineering" />
 					<p className="text-gray-700 mb-4 mt-2">
-						POLY PLAST offers optimized pipe systems design and engineering,
+						ROLAN PLAST offers optimized pipe systems design and engineering,
 						including stress and surge analysis as well as pipe support packages
 						and detailed engineering for all composites products.
 					</p>

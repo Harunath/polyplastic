@@ -21,9 +21,9 @@ const Intro = () => {
 				5 decades.
 			</p>
 			<p className="text-gray-700 mb-6">
-				As a strategic move in 2021, Poly Plast has added on FRP Rod using UV
+				As a strategic move in 2021, Rolan Plast has added on FRP Rod using UV
 				curing technology, ranging from 0.5 mm to 6 mm diameter, for OFC
-				Industry, as a center support member, in its product basket. Poly Plast
+				Industry, as a center support member, in its product basket. Rolan Plast
 				has planned to produce 2 million km / annum FRP Rod, in a phased manner.
 				We can offer Hard Coat, Mega Bond, D Bond, E Bond, etc. products from
 				our Vadodara facility, which is operational now and has State-of-the-art
