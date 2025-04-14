@@ -59,11 +59,11 @@ const Footer: React.FC = () => {
 							<h3 className="text-lg font-semibold mb-2">Contact Us</h3>
 							<div className="flex items-center mt-2">
 								<MdPhone className="mr-2" size={24} /> {/* Phone icon */}
-								<span>+1234567890</span>
+								<span>78931 44369</span>
 							</div>
 							<div className="flex items-center mt-2">
 								<MdMailOutline className="mr-2" size={24} /> {/* Mail icon */}
-								<span>example@example.com</span>
+								<span>rolanplast652@gmail.com</span>
 							</div>
 						</div>
 					</div>
